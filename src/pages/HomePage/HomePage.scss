@@ -37,20 +37,44 @@
     10px 0 80px rgb(39, 118, 118);         /* outer right cyan */
     }
 
-    .logo {
+    .header-toolbar {
         position: absolute;
-        top: 30px; left: 60px;
-        font-size: 2rem;
-        color: white;
-        font-weight: 900;
+        top: 0; left:0 ;
+        // background-color: blue;
+        display: flex;
+        align-items: center;
+        justify-content: left;
+        width: 100%;
+        margin-top: 2rem;
+        padding-inline: 60px;
+        .logo {
+            // background-color: green;
+            flex-basis: 100%;
+            
+            font-size: 2rem;
+            color: white;
+            font-weight: 900;
+        }
+
+        a {
+            margin-inline: 1rem;
+            font-size: 1rem;
+            color: white;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+
+        a:hover {
+            color: #304660;
+        }
     }
+    
 
     .right-pane {
         background-color: blue;
         position: absolute;
-        top: 50%; left: 73%;
         transform: translate(-50%,-50%);
-
+        transition: left 1s linear;
         background-color: transparent;
         display: flex;
         align-items: center;
@@ -64,15 +88,15 @@
             border: 7px solid #304660;
             box-shadow: 0 3px 5px 0 rgba(0,0,0,0.5);
             padding: 7px;
+            background-color: #304660;
         }
     }
 
     .left-pane {
         background-color: blue;
         position: absolute;
-        top: 50%; left: 60px;
-        transform: translate(0%,-50%);
-
+        
+        transition: left 1s linear;
         background-color: transparent;
         display: flex;
         flex-direction: column;
@@ -113,7 +137,10 @@
                     margin: 0.5rem;
                 }
             }
-            
+        }
+        .stats {
+            display: flex;
+            margin-top:1.5rem;
         }
     }
 
