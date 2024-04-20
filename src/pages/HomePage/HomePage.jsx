@@ -4,6 +4,8 @@ import { Intro, IntroR } from '../Intro/Intro'
 import RightPane from '../../components/RightPane/RightPane'
 import LeftPane from '../../components/LeftPane/LeftPane'
 import { Education, EducationR } from '../Education/Education'
+import { Certificates, CertificatesR } from '../Certificates/Certificates'
+import { Skills, SkillsR } from '../Skills/Skills'
 
 function HomePage() {
     const [LeftPane1_Left, setLeftPane1_Left] = useState("60px");
@@ -11,17 +13,46 @@ function HomePage() {
 
     const [LeftPane2_Left, setLeftPane2_Left] = useState("-100%");
     const [RightPane2_Left, setRightPane2_Left] = useState("200%");
-    function HidePanes1() {
-        setLeftPane1_Left("-100%"); setRightPane1_Left("200%");
-        setLeftPane2_Left("-100%"); setRightPane2_Left("200%");
+
+    const [LeftPane3_Left, setLeftPane3_Left] = useState("-100%");
+    const [RightPane3_Left, setRightPane3_Left] = useState("200%");
+
+    const [LeftPane4_Left, setLeftPane4_Left] = useState("-100%");
+    const [RightPane4_Left, setRightPane4_Left] = useState("200%");
+
+    function HidePanes() {
+        setLeftPane1_Left("-100%"); 
+        // setRightPane1_Left("200%");
+        setLeftPane2_Left("-100%"); 
+        // setRightPane2_Left("200%");
+        setLeftPane3_Left("-100%"); 
+        // setRightPane3_Left("200%");
+        setLeftPane4_Left("-100%"); 
+        // setRightPane3_Left("200%");
     }
 
-    function ShowEducation() {
-        HidePanes1();
-        setLeftPane2_Left("60px");
-        setRightPane2_Left("73%");
+    function ShowHome() {
+        HidePanes();
+        setLeftPane1_Left("60px");
+        // setRightPane1_Left("73%");
     }
     
+    function ShowEducation() {
+        HidePanes();
+        setLeftPane2_Left("60px");
+        // setRightPane2_Left("73%");
+    }
+    
+    function ShowCertificates() {
+        HidePanes();
+        setLeftPane3_Left("60px");
+        // setRightPane3_Left("73%");
+    }
+
+    function ShowSkills() {
+        HidePanes();
+        setLeftPane4_Left("60px");
+    }
     return (
         <div className='homepage-parent'>
             <svg className='bg' xmlns="http://www.w3.org/2000/svg" version="1.1" xmlnsXlink="http://www.w3.org/1999/xlink" xmlns:svgjs="http://svgjs.dev/svgjs" viewBox="0 0 100vh 100vh" width="700" height="700" opacity="1"><defs><filter id="nnnoise-filter" x="-20%" y="-20%" width="140%" height="140%" filterUnits="objectBoundingBox" primitiveUnits="userSpaceOnUse" colorInterpolationFilters="linearRGB">
@@ -40,17 +71,17 @@ function HomePage() {
 
             <div className="header-toolbar">
                 <div className="logo">&lt;/&gt;</div>
-                <a href="#">Home</a>
+                <a href="#" onClick={ShowHome}>Home</a>
                 <a href="#Education" onClick={ShowEducation}>Education</a>
-                <a href="#">Certificates</a>
-                <a href="#">Skills</a>
-                <a href="#">Portfolio</a>
+                <a href="#" onClick={ShowCertificates}>Certificates</a>
+                <a href="#" onClick={ShowSkills}>Skills</a>
+                <a href="#">Showcase</a>
                 <a href="#">Past Projects</a>
             </div>
 
             <LeftPane style={{ top: "50%", left: LeftPane1_Left, transform: "translate(0%,-50%)" }}
                       className='left-pane' >
-                <Intro HidePanes1={HidePanes1}/>
+                <Intro HidePanes={HidePanes}/>
             </LeftPane>
 
             <RightPane style={{top: "50%", left: RightPane1_Left}}
@@ -58,7 +89,7 @@ function HomePage() {
                 <IntroR />
             </RightPane>
 
-            <LeftPane style={{top: "15%", left: LeftPane2_Left}}
+            <LeftPane style={{top: "15vh", left: LeftPane2_Left}}
                       className='left-pane' >
                 <Education />
             </LeftPane>
@@ -66,6 +97,26 @@ function HomePage() {
             <RightPane style={{top: "50%", left: RightPane2_Left}}
                        className='right-pane' >
                 <EducationR />
+            </RightPane>
+
+            <LeftPane style={{top: "15vh", left: LeftPane3_Left}}
+                      className='left-pane' >
+                <Certificates />
+            </LeftPane>
+
+            <RightPane style={{top: "50%", left: RightPane3_Left}}
+                       className='right-pane' >
+                <CertificatesR />
+            </RightPane>
+
+            <LeftPane style={{top: "15vh", left: LeftPane4_Left}}
+                      className='left-pane' >
+                <Skills />
+            </LeftPane>
+
+            <RightPane style={{top: "50%", left: RightPane4_Left}}
+                       className='right-pane' >
+                <SkillsR />
             </RightPane>
         </div>
     )
