@@ -140,7 +140,13 @@
         }
         .stats {
             display: flex;
-            margin-top:1.5rem;
+            margin-block:1.5rem;
+        }
+        .buttons {
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
     }
 

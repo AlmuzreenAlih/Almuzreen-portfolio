@@ -62,7 +62,7 @@ export function Certificates() {
 export function CertificatesR() {
     return (
         <div className='certificates-parent'>
-            <img className='profile-pic' src="https://avatars.githubusercontent.com/u/111932402?s=400&u=fb9d24110b589aa354c4ab609c51936181bb5dd2&v=4" alt="" />
+            <img className='profile-pic' src="certificates.svg" alt="" />
         </div>
     )
 }

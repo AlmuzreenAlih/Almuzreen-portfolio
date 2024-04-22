@@ -1,0 +1,23 @@
+.chip-parent {
+    background-color: #010e1eff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgba(1,14,30,0.4);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 1rem;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.5);
+    padding-block: 2px;
+    padding-inline: 8px;
+    width: fit-content;
+    font-size: 0.81rem;
+    font-style: normal;
+
+    p {
+        margin-left: 4px;
+    }
+    i {
+        color: #4483cb;  
+    }
+}

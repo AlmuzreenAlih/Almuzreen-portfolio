@@ -1,0 +1,18 @@
+.button-parent {
+    border: 0px;
+    border-radius: 8px;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.5);
+    color: white;
+    background-color: #4483cb;
+    width: fit-content;
+    padding-block: 8px;
+    padding-inline: 12px;
+    font-weight: 700;
+    margin-block: 0.5rem;
+
+    cursor: pointer;
+}
+
+.button-parent:hover {
+    filter: brightness(1.1)
+}

@@ -1,0 +1,22 @@
+.github-parent {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    i {
+        margin-inline: 10px;
+        transition: font-size 0.3s linear, margin-inline-start 0.3s linear;
+        font-size: 30px;
+    }
+
+    cursor: pointer;
+}
+
+.github-parent:hover {
+    i {
+        font-size: 34px;
+        margin-inline: 9px;
+        color: rgb(10,10,10);
+    }
+    
+}

@@ -2,7 +2,7 @@
     // background-color: green;
 
     .showcase-title {
-        font-size: 2rem;
+        font-size: 1.75rem;
         font-weight: 800;
         color:white;
         margin-bottom: 1rem;
@@ -10,7 +10,7 @@
 
     .showcase-body {
         overflow: auto;
-        height: 70vh;
+        height: 80vh;
         // background-color: #304660;
     }
     .showcase-card {
@@ -19,42 +19,72 @@
         box-shadow: 0 3px 5px 0 rgba(0,0,0,0.5);
         position: relative;
         display: flex;
+        // flex-direction: column;
+        // justify-content: start;
+        // align-items: center;
         width: 44vw;
         padding-block: 0.5rem;
         padding-inline: 1rem;
         margin-bottom: 1.5rem;
 
-        .school-pic {
+        .showcase-pic {
             position: relative;
-            width: 70px;
-            height: 70px;
-            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;;
             border: 3px solid #304660;
             box-shadow: 0 3px 5px 0 rgba(0,0,0,0.5);
             // padding: 7px;
-            background-color: #304660;
+            background-color: #010e1eff;
             margin-right: 1rem;
+            padding: 4px;
         }
 
-        .school-details {
+        .showcase-details {
+            width: 100%;
             .title {
-                font-size: 1.25rem;
+                font-size: 1.15rem;
                 font-weight: 800;
                 color:white;
                 margin-bottom: 0rem;
+                width: 100%;
             }
-
-            .school {
-                font-size: 1rem;
+            .brief-description {
+                font-style: italic;
+                color: #4990e3;
+                margin-bottom: 4px;
+                font-weight: 700;
+            }
+            .site {
+                font-size: 0.9rem;
                 font-weight: 500;
                 color:white;
             }
 
             .years {
-                font-size: 0.9rem;
+                font-size: 0.85rem;
                 font-weight: 500;
                 font-style: italic;
                 color:white;
+                background-color: transparent;
+                display: flex;
+                flex-wrap: wrap;
+                row-gap: 10px;
+                align-items: center;
+                justify-content: start;
+                margin-top: 8px;
+                margin-bottom: 6px;
+                .chips {
+                    margin-inline:2px;
+                    cursor: pointer;
+                }
+            }
+
+            .buttons {
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: start;
             }
         }
     }
