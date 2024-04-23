@@ -15,61 +15,61 @@ function HomePage() {
     const [aSkil, setASkil] = useState("white");
     const [aShow, setAShow] = useState("white");
     
-    const [LeftPane1_Left, setLeftPane1_Left] = useState("60px");
+    const [LeftPane1_Left, setLeftPane1_Left] = useState("left-pane left-show");
     const [RightPane1_Left, setRightPane1_Left] = useState("73%");
 
-    const [LeftPane2_Left, setLeftPane2_Left] = useState("-100%");
+    const [LeftPane2_Left, setLeftPane2_Left] = useState("left-pane left-hidden");
     const [RightPane2_Left, setRightPane2_Left] = useState("200%");
 
-    const [LeftPane3_Left, setLeftPane3_Left] = useState("-100%");
+    const [LeftPane3_Left, setLeftPane3_Left] = useState("left-pane left-hidden");
     const [RightPane3_Left, setRightPane3_Left] = useState("200%");
 
-    const [LeftPane4_Left, setLeftPane4_Left] = useState("-100%");
+    const [LeftPane4_Left, setLeftPane4_Left] = useState("left-pane left-hidden");
     const [RightPane4_Left, setRightPane4_Left] = useState("200%");
 
-    const [LeftPane5_Left, setLeftPane5_Left] = useState("-100%");
+    const [LeftPane5_Left, setLeftPane5_Left] = useState("left-pane left-hidden");
     const [RightPane5_Left, setRightPane5_Left] = useState("200%");
 
     function HidePanes() {
-        setLeftPane1_Left("-100%"); setAHome("white");
+        setLeftPane1_Left("left-pane left-hidden"); setAHome("white");
         setRightPane1_Left("200%");
-        setLeftPane2_Left("-100%"); setAEduc("white");
+        setLeftPane2_Left("left-pane left-hidden"); setAEduc("white");
         setRightPane2_Left("200%");
-        setLeftPane3_Left("-100%"); setACert("white");
+        setLeftPane3_Left("left-pane left-hidden"); setACert("white");
         setRightPane3_Left("200%");
-        setLeftPane4_Left("-100%"); setASkil("white");
+        setLeftPane4_Left("left-pane left-hidden"); setASkil("white");
         setRightPane4_Left("200%");
-        setLeftPane5_Left("-100%"); setAShow("white");
+        setLeftPane5_Left("left-pane left-hidden"); setAShow("white");
         setRightPane5_Left("200%");
     }
 
     function ShowHome() {
         HidePanes(); setAHome("#4990e3");
-        setLeftPane1_Left("60px");
+        setLeftPane1_Left("left-pane left-show");
         setRightPane1_Left("73%");
     }
     
     function ShowEducation() {
         HidePanes(); setAEduc("#4990e3");
-        setLeftPane2_Left("60px");
+        setLeftPane2_Left("left-pane left-show");
         setRightPane2_Left("73%");
     }
     
     function ShowCertificates() {
         HidePanes(); setACert("#4990e3");
-        setLeftPane3_Left("60px");
+        setLeftPane3_Left("left-pane left-show");
         setRightPane3_Left("73%");
     }
 
     function ShowSkills() {
         HidePanes(); setASkil("#4990e3");
-        setLeftPane4_Left("60px");
+        setLeftPane4_Left("left-pane left-show");
         setRightPane4_Left("73%");
     }
 
     function ShowShowcase() {
         HidePanes(); setAShow("#4990e3");
-        setLeftPane5_Left("60px");
+        setLeftPane5_Left("left-pane left-show");
         setRightPane5_Left("73%");
     }
     return (
@@ -99,8 +99,8 @@ function HomePage() {
                 {/* <a href="#">Past Projects</a> */}
             </div>
 
-            <LeftPane style={{ top: "50%", left: LeftPane1_Left, transform: "translate(0%,-50%)" }}
-                      className='left-pane' >
+            <LeftPane style={{ top: "15vh", height: "70vh"}}
+                      className={LeftPane1_Left} >
                 <Intro HidePanes={HidePanes} GoToShowcase={ShowShowcase}/>
             </LeftPane>
 
@@ -109,18 +109,18 @@ function HomePage() {
                 <IntroR />
             </RightPane>
 
-            <LeftPane style={{top: "15vh", left: LeftPane2_Left}}
-                      className='left-pane' >
+            <LeftPane style={{top: "15vh"}}
+                      className={LeftPane2_Left} >
                 <Education />
             </LeftPane>
 
-            <RightPane style={{top: "50%", left: RightPane2_Left}}
+            <RightPane style={{top: "50vh", left: RightPane2_Left}}
                        className='right-pane' >
                 <EducationR />
             </RightPane>
 
-            <LeftPane style={{top: "15vh", left: LeftPane3_Left}}
-                      className='left-pane' >
+            <LeftPane style={{top: "15vh"}}
+                      className={LeftPane3_Left} >
                 <Certificates />
             </LeftPane>
 
@@ -129,18 +129,18 @@ function HomePage() {
                 <CertificatesR />
             </RightPane>
 
-            <LeftPane style={{top: "15vh", left: LeftPane4_Left}}
-                      className='left-pane' >
+            {/* <LeftPane style={{top: "50%"}}
+                      className={LeftPane4_Left} >
                 <Skills />
             </LeftPane>
 
             <RightPane style={{top: "50%", left: RightPane4_Left}}
                        className='right-pane' >
                 <SkillsR />
-            </RightPane>
+            </RightPane> */}
 
-            <LeftPane style={{top: "15vh", left: LeftPane5_Left}}
-                      className='left-pane' >
+            <LeftPane style={{top: "15vh"}}
+                      className={LeftPane5_Left} >
                 <Showcase />
             </LeftPane>
 

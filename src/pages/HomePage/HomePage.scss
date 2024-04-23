@@ -96,21 +96,20 @@
         background-color: blue;
         position: absolute;
         
-        transition: left 1s linear;
+        transition: left 1s linear, transform 1s linear;
         background-color: transparent;
         display: flex;
         flex-direction: column;
         align-items: start;
-        justify-content: start;
+        justify-content: center;
 
-        width: 45%;
-        height: 60%;
+        width: fit-content;
 
         .name {
             color: white;
             font-size: 3rem;
             font-weight: 700;
-
+            width: 45vw;
             i {
                 font-style: normal;
                 color: #2c3b4d;
@@ -151,4 +150,14 @@
     }
 
     
+}
+
+.left-show {
+    left: 60px;
+    transform: translateX(0%);
+}
+
+.left-hidden {
+    left: 0px;
+    transform: translateX(-100%);
 }

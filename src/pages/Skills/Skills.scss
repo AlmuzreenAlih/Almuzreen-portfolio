@@ -5,12 +5,12 @@
         font-size: 1.75rem;
         font-weight: 800;
         color:white;
-        margin-bottom: 1rem;
+        margin-bottom: 0.9rem;
     }
 
     .skills-body {
         overflow: auto;
-        height: 70vh;
+        height: fit-content;
         display: flex;
         width: 580px;
         display: flex;
@@ -18,7 +18,7 @@
         justify-content: start;
         flex-wrap: wrap;
         gap: 0px;
-        
+        margin-bottom: 1rem;
         // background-color: #304660;
     }
     .skill-card {

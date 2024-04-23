@@ -24,12 +24,6 @@ export function Intro(props) {
                 <SmallCard number='4' label='Certificates' />
                 <SmallCard number='3' label='Showcases' />
             </div>
-            {/* <div className="buttons">
-                <Button style={{width: "120px", textAlign: "center", fontSize: "1.15rem", marginRight: "1rem"}} 
-                        label='Skills' onClick={props.GoToShowcase}></Button>
-                <Button style={{width: "120px", textAlign: "center", fontSize: "1.15rem", marginRight: "1rem"}} 
-                        label='Showcase' onClick={props.GoToShowcase}></Button>
-            </div> */}
         </>
     )
 }

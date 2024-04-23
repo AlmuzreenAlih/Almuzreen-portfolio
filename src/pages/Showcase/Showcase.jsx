@@ -38,8 +38,8 @@ export function Showcase() {
                 <div className='showcase-details'>
                     <p className='title'>VarVault Web UI</p>
                     <p className='brief-description'>Dashboard UI for my VarVault API</p>
-                    <p className='site'>A Dashboard UI that interatively has the same functionality as the VarVault API. By 
-                                        interacting with this Web UI, users doesn't need HTTP Request Managers such as PostMan. </p>
+                    <p className='site'>A Dashboard UI that has the same functionality as the VarVault API. By 
+                                        interacting with this Web UI, users can manage their account, variables and generated tokens. </p>
                     <p className='years'>
                         <Chip className='chips' symbol='devicon-react-original colored' label='React'/>
                         <Chip className='chips' symbol='devicon-nodejs-plain colored' label='Node.js'/>
@@ -71,8 +71,8 @@ export function ShowcaseR() {
                     <img className='showcase-pic' src="varvault.png?x=ddd453ss2" alt="" />
                     <div className='showcase-details'>
                         <p className='title'>VarVault API</p>
-                        <p className='brief-description'>Share Information between Devices API</p>
-                        <p className='site'>Varvault API can be used for Embedded board device IoT projects, providing a functionality for monitoring sensor variables or data, 
+                        <p className='brief-description'>Easy Database API</p>
+                        <p className='site'>Without coding knowledge for backend development, users can use Varvault API for Embedded board device IoT projects, providing a functionality for creating variables for monitoring sensor readings, 
                                             controlling logics, and managing parameters remotely over the Internet. </p>
                         <p className='years'>
                             <Chip className='chips' symbol='devicon-nodejs-plain colored' label='Node.js'/>
