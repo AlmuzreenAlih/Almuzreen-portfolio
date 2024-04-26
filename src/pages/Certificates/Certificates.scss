@@ -1,3 +1,9 @@
+@mixin mobile {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+
 .certificates-parent {
     // background-color: green;
 
@@ -11,6 +17,7 @@
     .certificates-body {
         overflow: auto;
         height: 70vh;
+        // @include mobile { width: 90vw; }
         // background-color: #304660;
     }
 
@@ -21,6 +28,7 @@
         position: relative;
         display: flex;
         width: 44vw;
+        @include mobile { width: 90vw; }
         padding-block: 0.5rem;
         padding-inline: 1rem;
         margin-bottom: 1.5rem;

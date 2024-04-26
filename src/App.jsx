@@ -12,6 +12,7 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<HomePage />} />
+          <Route path='/hello' element={<HomePage />} />
         </Routes>
       </Router>
     </>

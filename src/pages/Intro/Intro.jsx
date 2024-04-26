@@ -1,10 +1,10 @@
 import { useState } from 'react'
 import SmallCard from '../../components/SmallCard/SmallCard'
 import Button from '../../components/Button/Button'
-
+import './Intro.scss'
 export function Intro(props) {
     return (
-        <>
+        <div className='intro-parent'>
             <div>
                 <p className='name'>Hello World, my name is Almuzreen Alih.</p>
             </div>
@@ -24,14 +24,14 @@ export function Intro(props) {
                 <SmallCard number='4' label='Certificates' />
                 <SmallCard number='3' label='Showcases' />
             </div>
-        </>
+        </div>
     )
 }
 
 export function IntroR() {
     return (
         <>
-            <img className='profile-pic' src="https://avatars.githubusercontent.com/u/111932402?s=400&u=fb9d24110b589aa354c4ab609c51936181bb5dd2&v=4" alt="" />
+            <img className='profile-pic' src="mypic.jpg" alt="" />
         </>
     )
 }

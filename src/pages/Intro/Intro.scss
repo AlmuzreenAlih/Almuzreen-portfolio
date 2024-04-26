@@ -1,0 +1,62 @@
+@mixin mobile {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+
+.intro-parent {
+    overflow: auto;
+    max-width: 95vw;
+    @include mobile {
+        height:60vh;
+    }
+}
+
+.name {
+    color: white;
+    font-size: 3rem;
+    font-weight: 700;
+    width: 45vw;
+    i {
+        font-style: normal;
+        color: #2c3b4d;
+    }
+    @include mobile { 
+        font-size: 2rem;
+        width: 90vw;
+    }
+}
+
+.profession {
+    color: #4990e3;
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.explain {
+    margin-top: 0.7rem;
+
+    ul {
+        
+        list-style-type: disc;
+        list-style-position: inside;
+
+        li {
+            @include mobile { width: 90vw }
+            font-size: 1.16rem;
+            font-weight: 100;
+            color: white;
+            margin: 0.5rem;
+        }
+    }
+}
+.stats {
+    display: flex;
+    margin-block:1.5rem;
+}
+.buttons {
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

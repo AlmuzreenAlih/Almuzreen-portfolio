@@ -30,7 +30,7 @@ export function Skills() {
                 </SkillCard>
 
                 <SkillCard>
-                    <i class="devicon-express-original-wordmark skill-pic"></i>
+                    <i className="devicon-express-original-wordmark skill-pic"></i>
                     <div className="skill-name">
                         Express.js
                     </div>
@@ -71,7 +71,7 @@ export function Skills() {
 
 export function SkillsR() {
     return (
-        <div className='skills-parent'>
+        <div className='skills-parent center'>
             <img className='profile-pic' src="eng_team.svg" alt="" />
         </div>
     )

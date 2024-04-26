@@ -1,3 +1,9 @@
+@mixin mobile {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+
 .education-parent {
     // background-color: green;
 
@@ -20,6 +26,7 @@
         position: relative;
         display: flex;
         width: 44vw;
+        @include mobile { width: 90vw; } 
         padding-block: 0.5rem;
         padding-inline: 1rem;
         margin-bottom: 1.5rem;

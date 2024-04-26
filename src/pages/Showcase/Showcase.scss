@@ -1,3 +1,9 @@
+@mixin mobile {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+
 .showcase-parent {
     // background-color: green;
 
@@ -23,6 +29,7 @@
         // justify-content: start;
         // align-items: center;
         width: 44vw;
+        @include mobile { width: 90vw; }
         padding-block: 0.5rem;
         padding-inline: 1rem;
         margin-bottom: 1.5rem;
