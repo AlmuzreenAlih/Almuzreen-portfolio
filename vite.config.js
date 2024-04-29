@@ -7,7 +7,7 @@ export default defineConfig({
   server: {
     // hmr:false,
     host: true,
-    port: 5124,
+    port: 5125,
     base: '/reactor/'
   }
 })
