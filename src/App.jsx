@@ -1,12 +1,22 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import HomePage from './pages/HomePage/HomePage'
-
+import axios from 'axios'
 import './App.scss'
 
 function App() {
-  const [count, setCount] = useState(0)
 
+  useEffect(() => {
+    const pingAPI = async () => {
+      try {
+        await axios.get("https://varvault-web-ui.onrender.com/d");
+      } catch (error) {
+        console.error("Error pinging API:", error);
+      }
+    };
+    pingAPI();
+  }, []); 
+    
   return (
     <>
       <Router>

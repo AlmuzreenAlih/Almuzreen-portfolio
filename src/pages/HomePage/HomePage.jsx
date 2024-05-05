@@ -150,7 +150,8 @@ function HomePage() {
 
                 <div className="header-toolbar">
                     {!isMobile ? <div className="logo">{/* &lt;/&gt; */}
-                        <img src="mylogo3.png" alt="" /> <p className='typewriter' >lmuz Percival Wulfric Brian Dumbledore</p>
+                        <img src="mylogo3.png" alt="" /> 
+                        <p className='typewriter' >lmuz Wulfric Brian Dumbledore</p>
                     </div> : null}
                     <a href="#"             style={{color: aHome}} onClick={ShowHome}        >Home</a>
                     <a href="#Skills"       style={{color: aSkil}} onClick={ShowSkills}      >Skills</a>

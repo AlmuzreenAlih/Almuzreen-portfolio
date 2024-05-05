@@ -28,6 +28,25 @@
     0% { border-color: transparent }
   }
 
+.typewriter::after {
+    content: "|";
+    display: inline;
+    animation: blink 1s infinite;
+}
+
+/* custom cursor animation */
+@keyframes blink {
+    0% {
+    opacity: 1;
+    }
+    50% {
+    opacity: 0;
+    }
+    100% {
+    opacity: 1;
+    }
+}
+
 .homepage-parent {
     position: fixed;
     width: 100%; height: 100vh;
@@ -103,7 +122,8 @@
             }
 
             .typewriter {
-                margin-left: 2px;
+                margin-left: 1px;
+
             }
         }
 
@@ -113,6 +133,10 @@
             color: white;
             white-space: nowrap;
             font-weight: 500;
+            height: 2rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         a:hover {

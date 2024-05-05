@@ -57,7 +57,7 @@ export function Skills() {
                 <SkillCard2 className="devicon-javascript-plain colored colored" name="JavaScript" /> 
                 {/* <SkillCard2 className="devicon-jquery-plain colored" name="Jquery" />  */}
                 <SkillCard2 className="devicon-php-plain colored" name="php" /> 
-                <SkillCard2 className="devicon-mysql-original colored" name="MySQL" /> 
+                <SkillCard2 className="devicon-mysql-original" name="MySQL" /> 
                 <SkillCard2 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
                             name="C++" /> 
                 <SkillCard2 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" 
