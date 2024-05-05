@@ -5,58 +5,91 @@
 }
 
 .intro-parent {
-    overflow: auto;
-    max-width: 95vw;
+    margin-inline: 60px;
+    padding-top: 110px;
+    background-color: transparent;
+    display: flex;
+    height: 100vh;
     @include mobile {
         height:60vh;
     }
-}
 
-.name {
-    color: white;
-    font-size: 3rem;
-    font-weight: 700;
-    width: 45vw;
-    i {
-        font-style: normal;
-        color: #2c3b4d;
-    }
-    @include mobile { 
-        font-size: 2rem;
-        width: 90vw;
-    }
-}
-
-.profession {
-    color: #4990e3;
-    font-size: 1.8rem;
-    font-weight: 700;
-}
-
-.explain {
-    margin-top: 0.7rem;
-
-    ul {
-        
-        list-style-type: disc;
-        list-style-position: inside;
-
-        li {
-            @include mobile { width: 90vw }
-            font-size: 1.16rem;
-            font-weight: 100;
+    .cell {
+        flex: 1.05;
+        // height: 400px;
+        background-color: transparent;
+        display: flex;
+        flex-direction: column;
+        // justify-content: center;
+        .name {
+            margin-top: 10px;
             color: white;
-            margin: 0.5rem;
+            font-size: 3rem;
+            font-weight: 700;
+            width: 45vw;
+            i {
+                font-style: normal;
+                color: #2c3b4d;
+            }
+            @include mobile { 
+                font-size: 2rem;
+                width: 90vw;
+            }
+        }
+        
+        .profession {
+            color: #4990e3;
+            font-size: 1.8rem;
+            font-weight: 700;
+        }
+        
+        .explain {
+            margin-top: 0.7rem;
+        
+            ul {
+                
+                list-style-type: disc;
+                list-style-position: inside;
+        
+                li {
+                    @include mobile { width: 90vw }
+                    font-size: 1.16rem;
+                    font-weight: 100;
+                    color: white;
+                    margin: 0.5rem;
+                }
+            }
+        }
+        .stats {
+            display: flex;
+            margin-top:1.5rem;
+        }
+        .buttons {
+            background-color: transparent;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .profile-pic {
+            position: relative;
+            width: 400px;
+            height: 400px;
+            border-radius: 50%;
+            border: 7px solid #304660;
+            box-shadow: 0 3px 5px 0 rgba(0,0,0,0.5);
+            padding: 7px;
+            background-color: #304660;
+            @include mobile { width: 23vh; height: 23vh; border: 2px solid #304660; padding: 3px;}
+
         }
     }
-}
-.stats {
-    display: flex;
-    margin-block:1.5rem;
-}
-.buttons {
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+    .cell-2nd {
+        flex: 1;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+    }
 }
