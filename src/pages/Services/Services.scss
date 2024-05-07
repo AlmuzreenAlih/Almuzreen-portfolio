@@ -1,10 +1,19 @@
+@mixin mobile {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+
 .services-parent {
     position: relative;
     width: 100vw;
-    height: 70vh;
+    height: fit-content;
+    padding-block: 60px;
+    // max-height: 100vh;
     background-color: #020810;
 
     padding-inline: 100px;
+    @include mobile {padding-inline: 10px;}
     display: flex;
     align-items: center;
     justify-content: start;
@@ -15,6 +24,8 @@
         color: white;
         font-size: 2rem;
         font-weight: 500;
+        margin-bottom: 20px;
+
     }
     .cells {
         flex: 1;
@@ -22,6 +33,7 @@
         align-items: start;
         justify-content: center;
         width: 100%;
+        @include mobile {flex-direction: column; align-items: center;}
         .cell {
             flex:1;
             display: flex;
@@ -29,7 +41,7 @@
             justify-content: center;
             color:white;
             flex-direction: column;
-            
+            margin-bottom: 40px;
             .icon {
                 display: flex;
                 align-items: center;

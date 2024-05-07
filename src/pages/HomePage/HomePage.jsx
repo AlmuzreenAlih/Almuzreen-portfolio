@@ -103,8 +103,8 @@ function HomePage() {
                     {/* <a href="#">Past Projects</a> */}
                 </div>
                 <Intro GoToShowcase={ShowShowcase}/>
-                <Services></Services>
-                
+                <Services />
+                <Skills />
                 {/* <LeftPane style={{ top: !isMobile ? "50vh" : "40vh", left: !isMobile? LeftPane1_Left : LeftPane1_Left_M, 
                                 transform: !isMobile ? "translate(0%,-50%)" : "translate(0%,0%)"}}
                         className='left-pane' >

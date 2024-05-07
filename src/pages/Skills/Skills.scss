@@ -4,62 +4,138 @@
     }
 }
 
+:root {
+    --dark-color: #191f1d;
+    --mid-dark: #555a57;
+    --light-color: #ece0c8;
+    --mid-light: #949993;
+    --shadow: #0005;
+    --linear-rainbow: linear-gradient(
+        to right,#ede6bf,#ecc947,#cb5a31,#6f5d79,#4e779a
+    );
+    --circle-rainbow: radial-gradient(
+        circle at left top,#ede6bf,#ecc947,#cb5a31,#6f5d79,#4e779a
+    );
+    --noise-texture: url(https://i.gyazo.com/a26366e538851a5c569ff648e99b7fd4.png);
+    --gif-texture: url(https://64.media.tumblr.com/da60c13b478dda09ab90c27e880983b8/tumblr_nd4pwdPKdc1tun3l0o1_1280.gifv);
+}
+
 .skills-parent {
     // background-color: green;
-    overflow: auto;
-    height: 80vh;
-    .skills-title {
-        font-size: 1.75rem;
-        font-weight: 800;
-        color:white;
-        margin-bottom: 0.9rem;
-    }
-
-    .skills-body {
-        overflow: auto;
-        height: fit-content;
-        display: flex;
-        width: 580px;
-        @include mobile { width: 90vw }
-        display: flex;
-        align-items: start;
-        justify-content: start;
-        flex-wrap: wrap;
-        gap: 0px;
-        margin-bottom: 1rem;
-        // background-color: #304660;
-    }
-    .skill-card {
-        background-color: #304660;
-        border-radius: 8px;
-        box-shadow: 0 3px 5px 0 rgba(0,0,0,0.5);
-        position: relative;
+    // overflow: auto;
+    height: fit-content;
+    // max-height: 100vh;
+    width: 100vw;
+    padding-block: 60px;
+    padding-inline: 60px;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    @include mobile {flex-direction: column; padding-inline: 1.75rem;}
+    .cell {
+        flex: 1;
         display: flex;
         flex-direction: column;
-        align-items: center;
-        justify-content: center;
-        height: fit-content;
-        width: 6rem;
-        padding-top: 0.75rem;
-        padding-bottom: 0.5rem;
-        padding-inline: 1rem;
-        margin: 0.5rem;
-
-        .skill-pic {
-            position: relative;
-            font-size: 60px;
-            height: 60px;
-            border-radius: 50%;
-            background-color: #304660;
+        // width:300px;
+        position: relative;
+        .skills-title {
+            font-size: 1.75rem;
+            font-weight: 800;
+            color:white;
+            margin-bottom: 0.9rem;
+            @include mobile {font-size: 1.4rem; font-weight: 1000;}
         }
 
-        .skill-name {
-            text-align: center;
-            margin-top:0.5rem;
-            font-size: 0.9rem;
-            font-weight: 700;
+        .skills-body {
+            overflow: auto;
+            height: fit-content;
+            display: flex;
+            // @include mobile { width: 90vw }
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            flex-wrap: wrap;
+            gap: 0px;
+            margin-bottom: 1rem;
+            // background-color: #304660;
+        }
+        .skill-card {
+            background-color: #304660;
+            border-radius: 8px;
+            box-shadow: 0 3px 5px 0 rgba(0,0,0,0.5);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: fit-content;
+            min-width: 3rem;
+            max-width: 6rem;
+            padding-top: 0.75rem;
+            padding-bottom: 0.5rem;
+            padding-inline: 1rem;
+            margin: 0.5rem;
+
+            .skill-pic {
+                position: relative;
+                font-size: 60px;
+                height: 60px;
+                border-radius: 50%;
+                background-color: #304660;
+            }
+
+            .skill-name {
+                text-align: center;
+                margin-top:0.5rem;
+                font-size: 0.9rem;
+                font-weight: 700;
+                color: white;
+                white-space: nowrap;
+            }
+        }
+        .code {
+            // flex: 1;
+            margin: 0rem 1.25rem 1.25rem 1.25rem;
+            margin: 0rem 1rem 1.1rem 1rem;
+            @include mobile { margin-inline: 0;}
+            background-image: var(--gif-texture);
+            background-color: rgba(0, 0, 0, 0.5);
+            border: 0px solid #888;
+            border-radius: 16px;
+            box-shadow: 0 3px 5px 0 rgba(0,0,0,0.5);
+            height: 125px;
+
+            overflow:hidden;
             color: white;
-            white-space: nowrap;
+            font-weight: 400;
+            @include mobile { font-size: 0.7rem; }
+            position: relative;
+            margin-bottom: 1rem;
+            pre {
+                margin: 1rem 0 0 0;
+                padding: 0 1.5rem 1.5rem 1.5rem;
+                border: 0;
+                border-radius: 0;
+                overflow: auto;
+                background-color: var(--color_code);
+                width: 40vw;
+                @include mobile {width: 100%; padding: 0 0.5rem 0.5rem 0.5rem; margin: 0.5rem 0 0 0;}
+            }
+        }
+        .code:hover {
+            background-color: transparent;
+            background-image: var(--gif-texture);
         }
     }
 }
+
+@keyframes spawn{
+    0%{
+      box-shadow: 0 0 0 var(--shadow);
+      opacity:0%;
+    }
+    100%{
+      box-shadow: 0 0 32px var(--shadow);
+      opacity:100%;
+    }
+  }

@@ -31,11 +31,7 @@
 .homepage-parent {
     position: relative;
     overflow: hidden;
-    background-color: transparent;
-    display: flex;
-    align-items: center;
-    // justify-content: center;
-    flex-direction: column;
+    // height: 100vh;
     .background-div {
         position: fixed;
         width: 100vw; height: 100vh;
@@ -81,13 +77,13 @@
         top: -80px;
     }
     .header-toolbar {
-        // background-color: blue;
-        position: fixed;
+        // background-color: #020810;
+        position: fixed;    
         display: flex;
         align-items: center;
         justify-content: left;
         width: 100%;
-        margin-top: 2rem;
+        padding-top: 2rem;
         padding-inline: 60px;
         z-index: 2000;
         @include mobile { 
