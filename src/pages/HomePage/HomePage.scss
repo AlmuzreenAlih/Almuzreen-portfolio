@@ -76,58 +76,6 @@
         position: fixed;
         top: -80px;
     }
-    .header-toolbar {
-        // background-color: #020810;
-        position: fixed;    
-        display: flex;
-        align-items: center;
-        justify-content: left;
-        width: 100%;
-        padding-top: 2rem;
-        padding-inline: 60px;
-        z-index: 2000;
-        @include mobile { 
-            padding-inline: 0;
-            flex-wrap: wrap;
-            row-gap: 10px;
-        }
-        
-        .logo {
-            // background-color: green;
-            flex-basis: 100%;
-            @include mobile { flex-basis: 0%; width: 0;}
-            font-size: 1.5rem;
-            color: white;
-            font-weight: 900;
-            position: relative;
-            background-color: transparent;
-            display: flex;
-            align-items: center;
-            justify-content: start;
-            // font-style: italic;
-            img {
-                height: 3rem;
-                opacity: 90%;
-                mix-blend-mode:screen;
-            }
-
-            .typewriter {
-                margin-left: 2px;
-            }
-        }
-
-        a {
-            margin-inline: 1rem;
-            font-size: 1rem;
-            color: white;
-            white-space: nowrap;
-            font-weight: 500;
-        }
-
-        a:hover {
-            color: #304660;
-        }
-    }
 }
 
 .center {

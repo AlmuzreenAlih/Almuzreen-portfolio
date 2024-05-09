@@ -14,8 +14,8 @@ export function Intro(props) {
                 </div>
                 <div className="explain">
                     <ul>
-                        <li>Experienced and Professional Software Developer</li>
-                        <li>Full Stack Web Development Enthusiast</li>
+                        <li>Experienced and Professional Soft&shy;ware Developer</li>
+                        <li>Full Stack Web Development En&shy;thu&shy;siast</li>
                         <li>Licensed Electronics Engineer</li>
                     </ul>
                 </div>

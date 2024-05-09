@@ -9,35 +9,11 @@ import { Skills, SkillsR } from '../Skills/Skills'
 import { Showcase, ShowcaseR } from '../Showcase/Showcase'
 import ImagesCarousel from '../../components/ImagesCarousel/ImagesCarousel'
 import Services from '../Services/Services'
+import Header from '../Header/Header';
 
 function HomePage() {
-    const [aHome, setAHome] = useState("#4990e3");
-    const [aEduc, setAEduc] = useState("white");
-    const [aCert, setACert] = useState("white");
-    const [aSkil, setASkil] = useState("white");
-    const [aShow, setAShow] = useState("white");
     const leftShowValueDesktop = "60px";
     const leftShowValueMobile = "";
-
-    function ShowHome() {
-        
-    }
-    
-    function ShowEducation() {
-        
-    }
-    
-    function ShowCertificates() {
-
-    }
-
-    function ShowSkills() {
-        
-    }
-
-    function ShowShowcase() {
-        
-    }
 
     const [isMobile, setIsMobile] = useState(false);
     const [resizedHooked, setResizedHooked] = useState(false);
@@ -54,7 +30,7 @@ function HomePage() {
     const imagesSH1 = ["sh1/ss1.webp","sh1/ss2.webp","sh1/ss3.webp","sh1/ss4.webp"]
     const imagesSH2 = ["sh2/ss1.webp","sh2/ss2.webp","sh2/ss3.webp","sh2/ss4.webp","sh2/ss5.webp","sh2/ss6.webp"]
     const imagesSH3 = ["sh3/ss1.webp","sh3/ss2.webp","sh3/ss3.webp","sh3/ss4.webp"]
-    const [images, setImages] = useState(imagesSH1)
+    const [images, setImages] = useState(["sh1/ss1.webp"])
     function setImagesSH1() {
         setCarouselShown(true);
         setImages(imagesSH1);
@@ -90,21 +66,14 @@ function HomePage() {
                     <div className="circle"></div>
                 </div>
                 
-                <div className="header-toolbar">
-                    {!isMobile ? <div className="logo">{/* &lt;/&gt; */}
-                        <img src="mylogo3.png" alt="" /> <p className='typewriter' >LMUZ DUMBLEDORE </p>
-                    </div> : null}
-                    <a href="#"             style={{color: aHome}} onClick={ShowHome}        >Home</a>
-                    <a href="#Skills"       style={{color: aSkil}} onClick={ShowSkills}      >Skills</a>
-                    <a href="#Showcase"     style={{color: aShow}} onClick={ShowShowcase}    >Showcase</a>
-                    {/* <a href="#">Experience</a> */}
-                    <a href="#Certificates" style={{color: aCert}} onClick={ShowCertificates}>Certificates</a>
-                    <a href="#Education"    style={{color: aEduc}} onClick={ShowEducation}   >Education</a>
-                    {/* <a href="#">Past Projects</a> */}
-                </div>
-                <Intro GoToShowcase={ShowShowcase}/>
+                <Header isMobile={isMobile}/>
+                <Intro/>
                 <Services />
                 <Skills />
+                <Showcase isMobile={isMobile} imagesSH1={imagesSH1} imagesSH2={imagesSH2} imagesSH3={imagesSH3}
+                            images={images} setImages={setImages}
+                            setImagesSH1={setImagesSH1} setImagesSH2={setImagesSH2} setImagesSH3={setImagesSH3} />
+
                 {/* <LeftPane style={{ top: !isMobile ? "50vh" : "40vh", left: !isMobile? LeftPane1_Left : LeftPane1_Left_M, 
                                 transform: !isMobile ? "translate(0%,-50%)" : "translate(0%,0%)"}}
                         className='left-pane' >

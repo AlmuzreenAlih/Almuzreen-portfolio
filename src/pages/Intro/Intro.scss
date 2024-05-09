@@ -5,28 +5,28 @@
 }
 
 .intro-parent {
-    margin-inline: 60px;
+    padding-block: 60px;
+    padding-inline: 60px;
     padding-top: 110px;
     background-color: transparent;
     display: flex;
     height: 100vh;
     @include mobile {
-        height:60vh;
+        height: fit-content;
+        padding-inline: var(--mobile_padding_inline);
+        flex-direction: column;
     }
 
     .cell {
         flex: 1.05;
-        // height: 400px;
         background-color: transparent;
         display: flex;
         flex-direction: column;
-        // justify-content: center;
         .name {
             margin-top: 10px;
             color: white;
             font-size: 3rem;
             font-weight: 700;
-            width: 45vw;
             i {
                 font-style: normal;
                 color: #2c3b4d;
@@ -52,7 +52,7 @@
                 list-style-position: inside;
         
                 li {
-                    @include mobile { width: 90vw }
+                    // @include mobile { width: 90vw }
                     font-size: 1.16rem;
                     font-weight: 100;
                     color: white;
@@ -81,6 +81,7 @@
             padding: 7px;
             background-color: #304660;
             @include mobile { width: 23vh; height: 23vh; border: 2px solid #304660; padding: 3px;}
+            
 
         }
     }
@@ -90,6 +91,7 @@
         background-color: transparent;
         display: flex;
         align-items: center;
+        @include mobile { order: -1; }
         // justify-content: center;
     }
 }

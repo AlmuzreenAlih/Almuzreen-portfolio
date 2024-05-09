@@ -25,7 +25,7 @@ export function Skills() {
           scrollTop += 48;
   
           // Reset scrollTop to 0 if it reaches the bottom
-          if (scrollTop >= code1Ref.current.scrollHeight - code1Ref.current.clientHeight) {
+          if (scrollTop >= code1Ref.current.scrollHeight - 2*code1Ref.current.clientHeight) {
             scrollTop = 0;
           }
         } else {
@@ -44,7 +44,7 @@ export function Skills() {
           code2.substring(0,startIndex),
           { language: 'javascript' }
         ).value);
-        code2Ref.current.scrollTop = code2Ref.current.scrollHeight;
+        code2Ref.current.scrollTop = code2Ref.current.scrollHeight - 1*code1Ref.current.clientHeight;
         if (startIndex >= code2.length) {startIndex = 0;}
       }, 100);
     
@@ -98,80 +98,87 @@ export function Skills() {
       { language: 'python' }
     ).value);
 
-    console.log(highlightedCode1)
     return (
-        <div className='skills-parent'>
-            <div className="cell">
-                <p className='skills-title'>Core Skills</p>
-                <div className='skills-body'>
-                    <SkillCard>
-                        <i className="devicon-react-original colored skill-pic"></i>
-                        <div className="skill-name">
-                            React
-                        </div>
-                    </SkillCard>
+        <div id='Skills' className='skills-parent'>
+            <p className='skill-title'>Skills</p>
+            <p className='skill-title2'>... so where do my great service come from?</p>
+            <div className='cells'>
+              <div className="cell">
+                  <p className='skills-title'>My Core Skills</p>
+                  <div className='skills-body'>
+                      <SkillCard>
+                          <i className="devicon-react-original colored skill-pic"></i>
+                          <div className="skill-name">
+                              React
+                          </div>
+                      </SkillCard>
 
-                    <SkillCard>
-                        <i className="devicon-nodejs-plain-wordmark colored skill-pic"></i>
-                        <div className="skill-name">
-                            Node.js
-                        </div>
-                    </SkillCard>
+                      <SkillCard>
+                          <i className="devicon-nodejs-plain-wordmark colored skill-pic"></i>
+                          <div className="skill-name">
+                              Node.js
+                          </div>
+                      </SkillCard>
 
-                    <SkillCard>
-                        <i className="devicon-express-original-wordmark skill-pic"></i>
-                        <div className="skill-name">
-                            Express.js
-                        </div>
-                    </SkillCard>
+                      <SkillCard>
+                          <i className="devicon-express-original-wordmark skill-pic"></i>
+                          <div className="skill-name">
+                              Express.js
+                          </div>
+                      </SkillCard>
 
-                    <SkillCard>
-                        <i className="devicon-postgresql-plain colored skill-pic"></i>
-                        <div className="skill-name">
-                            PostgreSQL
-                        </div>
-                    </SkillCard>
+                      <SkillCard>
+                          <i className="devicon-postgresql-plain colored skill-pic"></i>
+                          <div className="skill-name">
+                              PostgreSQL
+                          </div>
+                      </SkillCard>
 
-                    <SkillCard>
-                        <i className="devicon-sass-original colored skill-pic"></i>
-                        <div className="skill-name">
-                            Sass
-                        </div>
-                    </SkillCard>    
+                      <SkillCard>
+                          <i className="devicon-sass-original colored skill-pic"></i>
+                          <div className="skill-name">
+                              Sass
+                          </div>
+                      </SkillCard>    
 
-                </div>
+                  </div>
 
-                <p style={{marginBottom: "0.3rem"}} className='skills-title'>Other Skills</p>
-                <div className="skills-body">
-                    <SkillCard2 className="devicon-javascript-plain colored colored" name="JavaScript" /> 
-                    {/* <SkillCard2 className="devicon-jquery-plain colored" name="Jquery" />  */}
-                    <SkillCard2 className="devicon-php-plain colored" name="php" /> 
-                    <SkillCard2 className="devicon-mysql-original" name="MySQL" /> 
-                    <SkillCard2 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
-                                name="C++" /> 
-                    <SkillCard2 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" 
-                                name="Python" /> 
-                    <SkillCard2 className="devicon-visualbasic-plain colored colored" name="VB.Net" />
-                    
-                </div>
-            </div>
-            <div className="cell">
-                <div ref={code1Ref} className="code Code">
-                    <pre>
+                  <p style={{marginBottom: "0.3rem"}} className='skills-title'>Other Skills</p>
+                  <div className="skills-body">
+                      <SkillCard2 className="devicon-javascript-plain colored colored" name="JavaScript" /> 
+                      {/* <SkillCard2 className="devicon-jquery-plain colored" name="Jquery" />  */}
+                      <SkillCard2 className="devicon-php-plain colored" name="php" /> 
+                      <SkillCard2 className="devicon-mysql-original" name="MySQL" /> 
+                      <SkillCard2 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/cplusplus/cplusplus-original.svg"
+                                  name="C++" /> 
+                      <SkillCard2 src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/python/python-original.svg" 
+                                  name="Python" /> 
+                      <SkillCard2 className="devicon-visualbasic-plain colored colored" name="VB.Net" />
+                      
+                  </div>
+              </div>
+              <div className="cell">
+                  <div className="code Code">
+                    <p className='label'>Simplicity</p>
+                    <pre ref={code1Ref}>
                         <code className="language-javascript" dangerouslySetInnerHTML={{ __html: highlightedCode1 }} />
                     </pre>
-                </div>
-                <div ref={code2Ref} className="code">
-                  <pre>
-                    <code className="language-javascript" dangerouslySetInnerHTML={{ __html: highlightedCode2 }} />
-                  </pre>
-                </div>
-                <div ref={code3Ref} className="code">
-                  <pre>
-                    <code className="language-python" dangerouslySetInnerHTML={{ __html: highlightedCode3 }} />
-                  </pre>
-                </div>
+                  </div>
+                  <div className="code">
+                    <p className='label'>Cleanliness</p>
+                    <pre ref={code2Ref} >
+                      <code className="language-javascript" dangerouslySetInnerHTML={{ __html: highlightedCode2 }} />
+                    </pre>
+                  </div>
+                  <div  className="code">
+                  <p className='label'>Being Organized</p>
+                    <pre ref={code3Ref}>
+                      <code className="language-python" dangerouslySetInnerHTML={{ __html: highlightedCode3 }} />
+                    </pre>
+                  </div>
+              </div>
             </div>
+            
         </div>
     )
 }
