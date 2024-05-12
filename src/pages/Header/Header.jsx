@@ -65,7 +65,7 @@ function Header(props) {
         <div ref={headerToolbar} className="header-toolbar">
             {!props.isMobile ? <div className="logo">{/* &lt;/&gt; */}
                 <p className='typewriter' >
-                     @ALMUZ_DUMBLEDORE
+                     AA
                      {/* <span style={{fontSize: "32px"}} class="material-symbols-outlined">verified </span> */}
                     
                     </p>
@@ -74,7 +74,8 @@ function Header(props) {
             <a href="#Skills"       style={{color: aSkil}} onClick={ShowSkills}      >Skills</a>
             <a href="#Showcase"     style={{color: aShow}} onClick={ShowShowcase}    >Showcase</a>
             {/* <a href="#">Experience</a> */}
-            <a href="#Certificates" style={{color: aCert}} onClick={ShowCertificates}>Contact</a>
+            <a href="#Past" style={{color: aCert}} onClick={ShowCertificates}>Past Projects</a>
+            <a href="#Contact" style={{color: aCert}} onClick={ShowCertificates}>Contact</a>
             {/* <a href="#Education"    style={{color: aEduc}} onClick={ShowEducation}   >Education</a> */}
             {/* <a href="#">Past Projects</a> */}
         </div>

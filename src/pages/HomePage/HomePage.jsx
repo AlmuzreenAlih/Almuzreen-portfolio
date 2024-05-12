@@ -10,6 +10,8 @@ import { Showcase, ShowcaseR } from '../Showcase/Showcase'
 import ImagesCarousel from '../../components/ImagesCarousel/ImagesCarousel'
 import Services from '../Services/Services'
 import Header from '../Header/Header';
+import PastProjects from '../PastProjects/PastProjects';
+import Contact from '../Contact/Contact';
 
 function HomePage() {
     const leftShowValueDesktop = "60px";
@@ -73,7 +75,8 @@ function HomePage() {
                 <Showcase isMobile={isMobile} imagesSH1={imagesSH1} imagesSH2={imagesSH2} imagesSH3={imagesSH3}
                             images={images} setImages={setImages}
                             setImagesSH1={setImagesSH1} setImagesSH2={setImagesSH2} setImagesSH3={setImagesSH3} />
-
+                <PastProjects />
+                <Contact />
                 {/* <LeftPane style={{ top: !isMobile ? "50vh" : "40vh", left: !isMobile? LeftPane1_Left : LeftPane1_Left_M, 
                                 transform: !isMobile ? "translate(0%,-50%)" : "translate(0%,0%)"}}
                         className='left-pane' >

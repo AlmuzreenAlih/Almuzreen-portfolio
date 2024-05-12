@@ -1,0 +1,154 @@
+@mixin mobile {
+    @media (max-width: 1000px) {
+        @content;
+    }
+}
+
+.contact-parent {
+    height: fit-content;
+    padding-block: var(--padding-block-all);
+    padding-inline: 60px;
+    @include mobile {
+        padding-inline: var(--mobile_padding_inline);
+    }
+    background-color: #020810;
+    width: 100vw;
+
+    display: flex;
+    align-items: start;
+    justify-content: start;
+    position: relative;
+    .contact-form {
+        width: 100%;
+        background-color: transparent;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        border: 1px solid #888;
+        border-radius: 8px;
+        box-shadow: 0 3px 5px 0 rgba(0,0,0,0.5);
+
+        padding: 1.5rem;
+
+        h2 {
+            color: white;
+            font-family: Kanit;
+            font-size:2rem;
+        }
+
+        .label {
+            background-color: transparent;
+            display: flex;
+            align-items: start;
+            justify-content: start;
+            color: white;
+            width: 100%;
+            margin-top: 1rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .contact-form-intro {
+            color: white;
+        }
+
+        .inputValue {
+            
+            color: green;
+        }
+    }
+
+    .info {
+        width: 100%;
+        background-color: transparent;
+        display: flex;
+        align-items: start;
+        justify-content: center;
+        
+        padding: 1rem;
+        position: relative;
+        height: 100%;
+        .contact {
+            background-color: transparent;
+            width: 100%;
+
+            .row {
+                width: 100%;
+
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+
+                margin-bottom: 1.4rem;
+                margin-left: 3.5rem;
+                .title {
+                    font-size: 1.5rem;
+                    color: white; 
+                    font-family: Kanit;
+                    font-weight: 500;
+                }
+                .specific {
+                    font-size: 1.4rem;
+                    color: white;
+                }
+                .specific:hover {
+                    font-size: 1.5rem;
+                    text-shadow: 0 0 5px #ffffff;
+                }
+            }
+
+            .row-all {
+                width: 100%;
+
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: start;
+
+                margin-bottom: 1.4rem;
+                margin-top: 2rem;
+                background-color: transparent;
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+            }
+        }
+    }
+}
+
+.custom-icon {
+    font-size: 0.4rem;
+    color: #020810;
+    
+    border-radius: 25%;
+    box-shadow: 0 3px 5px 0 rgba(0,0,0,0.5);
+
+
+    // box-sizing: content-box;
+    padding: 5px;
+    background-color: #143b6d;
+    margin-right: 16px;
+    overflow: auto;
+    height: 2.25rem !important;
+    width: 2.25rem !important;
+    // width: fit-content;
+    // height: fit-content;
+}
+
+.custom-icon2 {
+    font-size: 2rem !important; 
+    // height: 2rem;
+}
+
+.copy-icon {
+    color: white;
+    cursor: pointer;
+    margin-left: 10px;
+}
+
+.copy-icon:hover {
+    text-shadow:  0 5px #ffffff;
+    font-size: 2rem;
+}

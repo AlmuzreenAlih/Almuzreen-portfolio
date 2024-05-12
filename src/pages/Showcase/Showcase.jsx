@@ -28,7 +28,7 @@ export function Showcase(props) {
     }
     
     return (
-        <div className='showcase-parent'>
+        <div id='Showcase' className='showcase-parent'>
             <p className='showcase-title'>Showcase</p>
             <p className='showcase-title2'>uhmm... what have I done?</p>
             <div className='showcase-body'>

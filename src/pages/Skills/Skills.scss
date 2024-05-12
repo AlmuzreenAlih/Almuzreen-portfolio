@@ -22,6 +22,7 @@
 
 .skills-parent {
     background-color: #020810;
+    // background-color: transparent;
     // overflow: auto;
     height: fit-content;
     // max-height: 100vh;
@@ -38,10 +39,8 @@
         font-size: 2rem;
         font-weight: 800;
         color:white;
-        // margin-bottom: 1rem;
         font-family: Kanit;
         padding: 0;
-        // line-height: 1.5rem;
         @include mobile {font-size: 1.4rem; font-weight: 1000;}
     }
 
